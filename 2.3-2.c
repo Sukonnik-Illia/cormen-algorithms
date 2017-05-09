@@ -76,19 +76,15 @@ void merge(int A[], int low, int mid, int high)
 			j++;
 		}
 		else {
-			if (i < n1) {
-				A[k] = L[i];
-				i++;
-			}
-			else {
-				A[k] = R[j];
-				j++;
-			}
+			break;
 		}
-
 	}
 
+	for(; i<n1; i++, k++)
+		A[k] = L[i];
 
+	for(;j<n2; j++, k++)
+		A[k] = R[j];
 }
 
 void print_A(int l, int A[])
