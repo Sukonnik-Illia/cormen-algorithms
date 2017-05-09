@@ -7,8 +7,8 @@ to A and then copying the remainder of the other array back into A
 #include <stdio.h>
 #include <stdlib.h>
 
-//#define MASS_INIT int A[] = {1, 3, 4, 2}, LEN = 4
-#define MASS_INIT int A[] = {8, 5, 11, 12, 2, 13, 1, 10, 9, 4, 7, 15, 6, 3, 16, 14}, LEN = 16
+#define MASS_INIT int A[] = {1, 3, 4, 2}, LEN = 4
+//#define MASS_INIT int A[] = {8, 5, 11, 12, 2, 13, 1, 10, 9, 4, 7, 15, 6, 3, 16, 14}, LEN = 16
 
 
 void sort(int A[], int low, int high);
@@ -19,8 +19,6 @@ void print_A(int l, int A[]);
 int main()
 {
 	MASS_INIT;
-
-	int i;
 
 	print_A(LEN, A);
 
@@ -33,7 +31,7 @@ int main()
 
 void sort(int A[], int low, int high)
 {
-	int mid, i;
+	int mid;
 
 	if(low < high) {
 		mid = (low + high) / 2;
